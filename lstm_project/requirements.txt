@@ -1,0 +1,10 @@
+torch
+rdkit
+pandas
+numpy
+matplotlib
+seaborn
+requests
+xlstm
+vina
+meeko

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+</head>
+
+<body>
+<h2>3D Molecule Viewer</h2>
+
+<div id="viewer" style="width:600px; height:400px;"></div>
+
+<script>
+async function loadMolecules() {
+    const res = await fetch("http://127.0.0.1:8000/molecules");
+    const data = await res.json();
+
+    let viewer = $3Dmol.createViewer("viewer", {backgroundColor: "white"});
+
+    // Show first molecule
+    viewer.addModel(data.molecules[0], "mol");
+    viewer.setStyle({}, {stick:{}});
+    viewer.zoomTo();
+    viewer.render();
+}
+
+loadMolecules();
+</script>
+<button onclick="prevMol()">Prev</button>
+<button onclick="nextMol()">Next</button>
+
+</body>
+<script>
+    let molecules = [];
+let index = 0;
+let viewer;
+
+async function loadMolecules() {
+    const res = await fetch("http://127.0.0.1:8000/molecules");
+    const data = await res.json();
+    molecules = data.molecules;
+
+    viewer = $3Dmol.createViewer("viewer", {backgroundColor: "white"});
+    showMol(0);
+}
+
+function showMol(i) {
+    viewer.clear();
+    viewer.addModel(molecules[i], "mol");
+    viewer.setStyle({}, {stick:{}});
+    viewer.zoomTo();
+    viewer.render();
+}
+
+function nextMol() {
+    index = (index + 1) % molecules.length;
+    showMol(index);
+}
+
+function prevMol() {
+    index = (index - 1 + molecules.length) % molecules.length;
+    showMol(index);
+}
+</script>
+</html>

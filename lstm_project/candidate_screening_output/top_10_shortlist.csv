@@ -1,0 +1,11 @@
+cns_rank,smiles,cns_mpo_score,d_clogp,d_clogd,d_mw,d_tpsa,d_hbd,clogp,tpsa,qed,mol_weight,novel_vs_training
+1,C#CCN(C)C1CCc2ccc(OC(=O)N(C)C)cc2C1=O,5.0,1.0,1.0,1.0,1.0,1.0,1.81,49.85,0.799,300.36,True
+2,COc1ccc(C(C#N)N2CCOCC2)cc1OC,5.0,1.0,1.0,1.0,1.0,1.0,1.6,54.72,0.825,262.31,False
+3,COc1ccccc1N1CCN(C)C2(C(=O)c3ccccc3C2=O)C1=O,5.0,1.0,1.0,1.0,1.0,1.0,1.79,66.92,0.773,350.37,True
+4,Cc1ccc([N+](=O)[O-])cc1,5.0,1.0,1.0,1.0,1.0,1.0,1.9,43.14,0.438,137.14,False
+5,CO[C@@H]1C=C[C@@]23c4cc5c(cc4CN(C)[C@@H]2C(=O)N(C)[C@H]3C1)OCO5,5.0,1.0,1.0,1.0,1.0,1.0,1.28,51.24,0.72,342.4,False
+6,COC(=O)c1cc2c(OC(=O)N(C)C)cccc2oc1=O,5.0,1.0,1.0,1.0,1.0,1.0,1.64,86.05,0.617,291.26,True
+7,COc1cccc(C(=O)Cc2cnc(C(=O)N(C)C)cn2)c1,5.0,1.0,1.0,1.0,1.0,1.0,1.61,72.39,0.784,299.33,True
+8,COc1ccc([N+](=O)[O-])c[n+]1C.F[B-](F)(F)F,5.0,1.0,1.0,1.0,1.0,1.0,1.73,56.25,0.266,255.96,False
+9,O=C1Cc2cc3c(cc2C1=O)OCO3,5.0,1.0,1.0,1.0,1.0,1.0,0.72,52.6,0.566,190.15,True
+10,CO[P@]1(=O)CC[C@H]2COC(=O)C2=C(C)O1,5.0,1.0,1.0,1.0,1.0,1.0,1.69,61.83,0.508,232.17,False
